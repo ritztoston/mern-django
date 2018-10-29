@@ -12,7 +12,7 @@ class UserProfileManager(BaseUserManager):
             raise ValueError('Users must have an email address.')
 
         if not avatar:
-            avatar = 'https://myspace.com/common/images/user.png'
+            avatar = 'Descartes_Labs.png'
 
         email = self.normalize_email(email)
 

@@ -82,7 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mern-devconnector',
         'USER': 'root',
-        'PASSWORD': 'root',
+        # 'PASSWORD': 'root',
+        'PASSWORD': 'Kimritzter109084546940',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
@@ -139,3 +140,4 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'users.UserProfile'
+from merndjango.jwtconf.main import *
