@@ -82,8 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mern-devconnector',
         'USER': 'root',
-        'PASSWORD': 'root',
-        # 'PASSWORD': 'Kimritzter109084546940',
+        # 'PASSWORD': 'root',
+        'PASSWORD': 'Kimritzter109084546940',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
