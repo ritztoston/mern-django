@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+# CORS_ORIGIN_WHITELIST = (
+#     'localhost:3000'
+# )
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
     'rest_framework',
     #local
     'users',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,4 +144,5 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'users.UserProfile'
-from merndjango.jwtconf.main import *
+# from merndjango.jwtconf.main import *
+CORS_ORIGIN_ALLOW_ALL=True
