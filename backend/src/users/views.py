@@ -24,11 +24,6 @@ class UserListView(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     permission_classes = (permission.UpdateOwnProfile,)
 
-# class UserRegisterView(viewsets.ModelViewSet):
-#     serializer_class = UserRegisterSerializer
-#     queryset = UserProfile.objects.all()
-#     permission_classes = ()
-
 class UserRegisterView(mixins.CreateModelMixin, generics.GenericAPIView):
     serializer_class = UserRegisterSerializer
     queryset = UserProfile.objects.all()

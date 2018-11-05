@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ValidationError
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 
 def upload_avatar(instance, filename):
@@ -36,10 +37,10 @@ class UserProfileManager(BaseUserManager):
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
 
-    email = models.EmailField(max_length=255, unique=True)
-    username = models.CharField(max_length=255, unique=True)
-    firstname = models.CharField(max_length=255)
-    lastname = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255, unique=True, null=True, blank=True, error_messages={'unique': 'This email already exists.'})
+    username = models.CharField(max_length=255, unique=True, null=True, blank=True, error_messages={'unique': 'This username already exists.'})
+    firstname = models.CharField(max_length=255, null=True, blank=True)
+    lastname = models.CharField(max_length=255, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     avatar = models.ImageField(upload_to=upload_avatar, null=True, blank=True)

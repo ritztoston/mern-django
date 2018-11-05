@@ -64,7 +64,7 @@ body {
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
-  width: 90%;
+  width: 100%;
   display: block;
   transition: all .3s;
   border-bottom: 1px solid #E8E5E8; }
@@ -73,8 +73,6 @@ body {
     border-bottom: 1px solid #0090ff; }
   .form__input:focus:invalid {
     border-bottom: 1px solid #F4766B; }
-    .form__input--is-invalid {
-        border-bottom: 1px solid #F4766B; }
 
 .form__label {
   font-size: 1.4rem;
@@ -88,22 +86,6 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
-
-.form__invalid {
-  font-size: 1.4rem;
-  margin-left: 2rem;
-  margin-top: .7rem;
-  display: block;
-  transition: all .3s;
-  opacity: 0;
-  visibility: hidden;
-  color: #F4766B;
-
-}
-.form__invalid-show {
-    opacity: 1;
-    visibility: visible;
-}
 
 .btn__ {
   background-color: #ffffff;
